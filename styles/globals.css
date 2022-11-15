@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.solorized {
+  background-color: #3949ab;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+.container {
+  max-width: 1104px;
+}
+.Layout {
+  width: 100%;
+}
+
+@media (min-width: 200px) {
+  body {
+    min-width: 481px;
+  }
+}
+
+@media (min-width: 320px) {
+  body {
+    min-width: 481px;
+  }
+}
+@media (min-width: 481px) {
+  body {
+    min-width: 641px;
+  } /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (min-width: 641px) {
+  body {
+    min-width: 961px;
+  }
+}
+@media (min-width: 961px) {
+  body {
+    min-width: 1025px;
+  }
+}
+@media (min-width: 1025px) {
+  body {
+    min-width: 1281px;
+  }
+}
+@media (min-width: 1281px) {
+  body {
+    width: 100%;
+  }
+}

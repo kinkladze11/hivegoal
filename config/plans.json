@@ -1,0 +1,19 @@
+{
+  "plans": [
+    {
+      "amount": 29.90,
+      "duration": 30,
+      "name": "Monthly"
+    },
+    {
+      "amount": 139.90,
+      "duration": 180,
+      "name": "Semi-Annually"
+    },
+    {
+      "amount": 199.90,
+      "duration": 360,
+      "name": "Annually"
+    }
+  ]
+}
