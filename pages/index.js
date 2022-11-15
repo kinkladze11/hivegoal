@@ -26,11 +26,11 @@ const Predictions = () => {
         });
       });
   }, [fixtures]);
-  console.log(match)
+  console.log(match);
   if (fixtures) {
     fixtures.forEach((fix) => {
       if (match[fix.fixture.id]?.predictions) {
-        fix={...fix, ...match[fix.fixture.id]}
+        fix = { ...fix, ...match[fix.fixture.id] };
         if (!leaguesToShow.includes(fix.league.id)) {
           leaguesToShow.push(fix.league.id);
         }
@@ -40,7 +40,7 @@ const Predictions = () => {
       }
     });
   }
-  console.log(categorised_fixtures, leaguesToShow)
+  console.log(categorised_fixtures, leaguesToShow);
   return (
     <>
       <Layout>

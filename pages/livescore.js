@@ -4,28 +4,13 @@ import Router, { useRouter } from "next/router";
 import axios from "axios";
 
 import Navbar from "@components/molecules/Navbar";
+import Tab from "@components/atoms/Tab";
 
 import Carousel from "../components/molecules/Carousel";
 import Layout from "../components/organisms/Layout";
 import Table from "../components/organisms/Livescoretable";
 import { ActionTypes, useGlobalState } from "../global_state";
 import { updateUser } from "../helpers/firebase";
-function DefaultColumnFilter({
-  column: { filterValue, preFilteredRows, setFilter },
-}) {
-  const count = preFilteredRows.length;
-
-  return (
-    <input
-      className=" outline-none"
-      value={filterValue || ""}
-      onChange={(e) => {
-        setFilter(e.target.value || undefined); // Set undefined to remove the filter entirely
-      }}
-      placeholder={`Search ${count} records...`}
-    />
-  );
-}
 
 export default function Index() {
   const [{ fixtures, match, user }, dispatch] = useGlobalState();
@@ -72,7 +57,6 @@ export default function Index() {
           </div>
         </div>
       ),
-      Filter: DefaultColumnFilter,
     },
     {
       Header: "Score",
@@ -186,8 +170,7 @@ export default function Index() {
   ];
   return (
     <Layout>
-      <Carousel fixtures={fixtures} />
-
+      <Tab name="Livescore" />
       <Table columns={coloumns} data={fixtures} />
     </Layout>
   );

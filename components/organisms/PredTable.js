@@ -11,7 +11,7 @@ function PredictionMatchRow({ fixture }) {
   const [{ user, match }] = useGlobalState();
   const active =
     user?.premium && new Date().getTime() < new Date(user?.premium).getTime();
-  console.log(fixture)
+  console.log(fixture);
   const handleClick = (item) => {
     if (active) router.push("/match/" + item.fixture.id);
     else router.push("/subscription");
@@ -54,89 +54,32 @@ function PredictionMatchRow({ fixture }) {
       <td className="text-center">{pred.predictions?.under_over}</td>
       <td className="text-center">{pred.predictions?.goals.home}</td>
       <td className="text-center">{pred.predictions?.goals.away}</td>
-      <td className="text-center">
-        <div className="flex justify-between">
-          <div className="border-2 border-red-600 p-1">
-            {pred.comparison.def.home}
-          </div>
-          <div className="border-2 border-red-600 p-1">
-            {pred.comparison.att.home}
-          </div>
-          <div className="border-2 border-red-600 p-1">
-            {pred.comparison.goals.home}
-          </div>
-        </div>
-        <div className="flex justify-between">
-          <div className="p-1">DEF</div>
-          <div className="p-1">MID</div>
-          <div className="p-1">GOAL</div>
-        </div>
-        <div className="flex justify-between">
-          <div className="border-2 border-red-600 p-1">
-            {pred.comparison.def.away}
-          </div>
-          <div className="border-2 border-red-600 p-1">
-            {pred.comparison.att.away}
-          </div>
-          <div className="border-2 border-red-600 p-1">
-            {pred.comparison.goals.away}
-          </div>
-        </div>
-      </td>
-      <td className="space-y-4 text-center">
-        <div className="home mx-auto w-fit border-2 border-blue-400 text-center">
-          {pred.comparison.h2h.home}
-        </div>
-        <div className="away mx-auto w-fit border-2 border-blue-400 text-center">
-          {pred.comparison.h2h.away}
-        </div>
-      </td>
+     
     </tr>
   );
 }
 const PredTable = (props) => {
-  console.log(props)
+  console.log(props);
   return (
-    <center>
-      <table className=" w-full text-sm xl:w-2/3 ">
-        <thead>
-          <tr className="bg-slate-300">
-            <th className="flex  flex-wrap  border-2 border-white p-2 font-light">
-              <img
-                src={props.item.flag}
-                className="h-10 w-fit"
-                alt="img"
-              />
-              <div>
-                <div>{props.item.country}</div>
-                <div>{props.item.name}</div>
-              </div>
-            </th>
-            <th className="border border-2 border-white p-2 font-light">
-              Win or Draw
-            </th>
-            <th className="border border-2 border-white p-2 font-light">
-              Under/Over
-            </th>
-            <th className="border border-2 border-white p-2 font-light">
-              Goals Home
-            </th>
-            <th className="border border-2 border-white p-2 font-light">
-              Goals Away
-            </th>
-            <th className="border border-2 border-white p-2 font-light">
-              Comparison
-            </th>
-            <th className="border border-2 border-white p-2 font-light">H2H</th>
-          </tr>
-        </thead>
-        <tbody>
-          {props.fixtures.map((item, i) => {
-            return <PredictionMatchRow fixture={item} />;
-          })}
-        </tbody>
-      </table>
-    </center>
+    <table className=" mx-auto w-full bg-white  text-xs xl:w-2/5">
+      <tr className="bg-slate-100">
+        <th className="flex flex-col space-x-2 p-2 font-light">
+          <div className="flex">
+            <div className="self-center">{props.item.country}</div>
+          </div>
+          <div className="  text-left">{props.item.name}</div>
+        </th>
+        <th className=" p-2 font-light">Win or Draw</th>
+        <th className="p-2 font-light">Under/Over</th>
+        <th className="e p-2 font-light">Goals Home</th>
+        <th className=" p-2 font-light">Goals Away</th>
+       
+      </tr>
+
+      {props.fixtures.map((item, i) => {
+        return <PredictionMatchRow fixture={item} />;
+      })}
+    </table>
   );
 };
 
