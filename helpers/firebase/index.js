@@ -6,12 +6,13 @@ const provider = new GoogleAuthProvider()
 import { doc, getDoc, getFirestore, setDoc, updateDoc } from 'firebase/firestore'
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDuxqYIS-bWlkuNOg0lus1KKOA9RiEYlM8',
-  authDomain: 'dscores-80716.firebaseapp.com',
-  projectId: 'dscores-80716',
-  storageBucket: 'dscores-80716.appspot.com',
-  messagingSenderId: '366404819838',
-  appId: '1:366404819838:web:56af6e999bb3d861b0b12f',
+  apiKey: "AIzaSyBp71TLmAJr9lGzWou7V2CAnUF1VlzfEIk",
+  authDomain: "viuscore.firebaseapp.com",
+  projectId: "viuscore",
+  storageBucket: "viuscore.appspot.com",
+  messagingSenderId: "523512503671",
+  appId: "1:523512503671:web:ba0af26d78b9d6b9595572",
+  measurementId: "G-L8YJ4ZEG9C"
 }
 
 // Initialize Firebase
