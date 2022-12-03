@@ -30,7 +30,7 @@ function PredictionMatchRow({ fixture }) {
     >
       <td className="flex flex-wrap space-x-4 p-2 ">
         <div className="data ">
-          <div>29.6</div>
+          <div>{fixture.fixture.date}</div>
           <div className="bg-green-500 text-white"> preview</div>
           <div>00.15 </div>
         </div>
@@ -71,7 +71,7 @@ const PredTable = (props) => {
         </th>
         <th className=" p-2 font-light">Win or Draw</th>
         <th className="p-2 font-light">Under/Over</th>
-        <th className="e p-2 font-light">Goals Home</th>
+        <th className="p-2 font-light">Goals Home</th>
         <th className=" p-2 font-light">Goals Away</th>
        
       </tr>
