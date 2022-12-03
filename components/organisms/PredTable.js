@@ -30,7 +30,7 @@ function PredictionMatchRow({ fixture }) {
     >
       <td className="flex flex-wrap space-x-4 p-2 ">
         <div className="data ">
-          <div>{fixture.fixture.date}</div>
+          <div>{new Date(fixture.fixture.date).toLocaleDateString()}</div>
           <div className="bg-green-500 text-white"> preview</div>
           <div>00.15 </div>
         </div>
