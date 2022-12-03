@@ -32,7 +32,7 @@ function PredictionMatchRow({ fixture }) {
         <div className="data ">
           <div>{new Date(fixture.fixture.date).toLocaleDateString()}</div>
           <div className="bg-green-500 text-white"> preview</div>
-          <div>00.15 </div>
+          <div>{new Date(fixture.fixture.date).toLocaleTimeString()} </div>
         </div>
         <div>
           <a>
