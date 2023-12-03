@@ -8,7 +8,7 @@
   text-align: center;
 }
 .form-bg {
-  overflow: serve;
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
