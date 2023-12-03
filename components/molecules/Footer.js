@@ -14,7 +14,7 @@ const Footer = () => {
         today. Covered 1000+ football results daily.
       </p>
       <div className=" mt-2">
-        <span className="">2022 RedScores - All Rights Reserved.</span>
+        <span className="">2022 Hivegoal - All Rights Reserved.</span>
         <span className="">Term of use, Privacy & Cookies policy Contact</span>
       </div>
     </footer>
