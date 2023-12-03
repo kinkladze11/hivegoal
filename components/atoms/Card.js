@@ -1,7 +1,7 @@
 const Cards = (props) => {
   return (
     <div className=" inline-block w-max p-3">
-      <div className=" max-w-xs overflow-serve rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
+      <div className=" max-w-xs overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
         <div className="heading solorized px-2 py-2 text-center text-white">
           <div>{props.team1}</div>
           <div>{props.team2}</div>
